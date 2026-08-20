@@ -1,0 +1,1877 @@
+/* =========================================================
+   VOISA — KNOW YOUR RIGHTS
+   PAGE-SPECIFIC STYLESHEET
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL PAGE RESET
+========================================================= */
+
+.rights-page,
+.rights-page * {
+    box-sizing: border-box;
+}
+
+.rights-page {
+    width: 100%;
+    min-height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    background: #f5f0e8;
+    color: #2b171b;
+
+    overflow-x: hidden;
+}
+
+.rights-page section,
+.rights-page nav,
+.rights-page footer,
+.rights-page div,
+.rights-page header {
+    max-width: none;
+}
+
+.rights-page h1,
+.rights-page h2,
+.rights-page h3,
+.rights-page h4,
+.rights-page p {
+    margin-top: 0;
+}
+
+.rights-page a {
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.rights-nav {
+    width: 100%;
+
+    min-height: 76px;
+
+    padding: 0 6vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: #f5f0e8;
+
+    border-bottom: 1px solid rgba(71, 25, 34, 0.2);
+
+    position: relative;
+    z-index: 20;
+}
+
+.rights-logo a {
+    color: #5a1725;
+
+    font-family: "Special Elite", cursive;
+
+    font-size: 1.5rem;
+
+    letter-spacing: 0.08em;
+}
+
+.rights-nav-links {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+}
+
+.rights-nav-links a {
+    color: #321a1f;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.68rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.08em;
+
+    transition: color 0.25s ease;
+}
+
+.rights-nav-links a:hover {
+    color: #8b2635;
+}
+
+.language-button {
+    border: 1px solid #6f2330;
+
+    background: transparent;
+
+    padding: 9px 13px;
+
+    color: #6f2330;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.62rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+
+    cursor: pointer;
+
+    transition: all 0.25s ease;
+}
+
+.language-button:hover {
+    background: #6f2330;
+    color: #f5f0e8;
+}
+
+
+/* =========================================================
+   HERO / COVER
+========================================================= */
+
+.rights-hero {
+    width: 100%;
+
+    min-height: 700px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(122, 38, 53, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(122, 38, 53, 0.08),
+            transparent 30%
+        ),
+        #f5f0e8;
+}
+
+
+/* Large editorial border */
+
+.rights-hero-frame {
+    position: absolute;
+
+    inset: 35px;
+
+    border: 1px solid rgba(111, 35, 48, 0.35);
+
+    pointer-events: none;
+}
+
+.rights-hero-frame::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 14px;
+
+    border: 1px solid rgba(111, 35, 48, 0.12);
+}
+
+
+/* Decorative corner lines */
+
+.rights-hero-frame::after {
+    content: "";
+
+    position: absolute;
+
+    top: -1px;
+    left: 50%;
+
+    width: 90px;
+    height: 2px;
+
+    transform: translateX(-50%);
+
+    background: #7a2635;
+}
+
+
+/* Main hero content */
+
+.rights-hero-content {
+    width: min(1050px, 84%);
+
+    position: relative;
+
+    z-index: 3;
+
+    text-align: center;
+
+    padding: 100px 0;
+}
+
+.rights-eyebrow {
+    margin: 0 0 28px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    color: #6f2330;
+}
+
+
+/* COVER TITLE */
+
+.rights-hero h1 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(5rem, 13vw, 10rem);
+
+    font-weight: 600;
+
+    line-height: 0.76;
+
+    letter-spacing: -0.05em;
+
+    color: #471721;
+}
+
+.rights-hero h1 span {
+    display: block;
+
+    margin-top: 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-weight: 400;
+
+    font-size: 0.72em;
+
+    color: #7a2635;
+}
+
+
+/* Decorative line */
+
+.rights-hero-line {
+    width: 150px;
+
+    height: 1px;
+
+    margin: 45px auto 25px;
+
+    background: #7a2635;
+
+    position: relative;
+}
+
+.rights-hero-line::before,
+.rights-hero-line::after {
+    content: "✦";
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #7a2635;
+
+    font-size: 0.7rem;
+}
+
+.rights-hero-line::before {
+    left: -25px;
+}
+
+.rights-hero-line::after {
+    right: -25px;
+}
+
+
+.rights-hero-description {
+    max-width: 580px;
+
+    margin: 0 auto;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.35rem;
+
+    line-height: 1.45;
+
+    color: #4c3438;
+}
+
+
+/* Decorative symbols */
+
+.rights-hero-decoration {
+    position: absolute;
+
+    z-index: 2;
+
+    color: rgba(111, 35, 48, 0.20);
+
+    font-family: "Cormorant Garamond", serif;
+
+    pointer-events: none;
+}
+
+.decoration-one {
+    top: 12%;
+
+    left: 11%;
+
+    font-size: 3rem;
+
+    transform: rotate(-15deg);
+}
+
+.decoration-two {
+    right: 10%;
+
+    bottom: 15%;
+
+    font-size: 8rem;
+
+    transform: rotate(8deg);
+
+    opacity: 0.5;
+}
+
+.decoration-three {
+    bottom: 12%;
+
+    left: 18%;
+
+    font-size: 1.5rem;
+}
+
+
+/* Small § mark */
+
+.rights-hero-mark {
+    position: absolute;
+
+    right: 7%;
+
+    top: 13%;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 4rem;
+
+    color: rgba(111, 35, 48, 0.16);
+
+    transform: rotate(-8deg);
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   SHARED SECTION ELEMENTS
+========================================================= */
+
+.rights-page-number {
+    position: absolute;
+
+    right: 5vw;
+
+    top: 55px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.12em;
+
+    color: #7d5d61;
+}
+
+.rights-section-label {
+    margin: 0 0 18px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.68rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.16em;
+
+    color: #7a2635;
+}
+
+.rights-star-divider {
+    width: 100%;
+
+    text-align: center;
+
+    padding: 50px 0;
+
+    font-size: 1.4rem;
+
+    color: #8b2635;
+
+    background: #f5f0e8;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.rights-introduction {
+    width: 100%;
+
+    position: relative;
+
+    padding: 120px 7vw;
+
+    background: #eee7dc;
+}
+
+.rights-intro-inner {
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+}
+
+.rights-introduction h2 {
+    margin: 0 0 65px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3.5rem, 7vw, 6rem);
+
+    font-weight: 600;
+
+    line-height: 0.85;
+
+    color: #4b1923;
+}
+
+.rights-introduction h2 em {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-weight: 400;
+
+    color: #7a2635;
+}
+
+.rights-intro-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+}
+
+.rights-intro-large p {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    line-height: 1.2;
+
+    color: #4b1923;
+}
+
+.rights-intro-text {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.2rem;
+
+    line-height: 1.6;
+}
+
+.rights-intro-text p {
+    margin-bottom: 25px;
+}
+
+.rights-intro-final {
+    padding-top: 15px;
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    color: #7a2635;
+}
+
+
+/* =========================================================
+   TOPIC SECTIONS
+========================================================= */
+
+.rights-topic-section {
+    width: 100%;
+
+    position: relative;
+
+    padding: 115px 7vw;
+}
+
+.school-rights {
+    background: #f5f0e8;
+}
+
+.law-basics {
+    background: #eee7dc;
+}
+
+.courts-section {
+    background: #f5f0e8;
+}
+
+.rights-topic-inner {
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+}
+
+.rights-topic-section h2 {
+    margin: 0 0 25px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3.5rem, 7vw, 6rem);
+
+    font-weight: 600;
+
+    line-height: 0.82;
+
+    color: #471721;
+}
+
+.rights-topic-section h2 em {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-weight: 400;
+
+    color: #7a2635;
+}
+
+.rights-topic-description {
+    max-width: 720px;
+
+    margin: 0 0 55px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.25rem;
+
+    line-height: 1.55;
+
+    color: #4c3438;
+}
+
+
+/* =========================================================
+   ACCORDIONS
+========================================================= */
+
+.rights-accordion {
+    width: 100%;
+
+    border-top: 1px solid rgba(71, 23, 33, 0.35);
+}
+
+.rights-accordion details {
+    width: 100%;
+
+    border-bottom: 1px solid rgba(71, 23, 33, 0.35);
+}
+
+.rights-accordion summary {
+    list-style: none;
+
+    min-height: 95px;
+
+    display: grid;
+
+    grid-template-columns: 70px 1fr 40px;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: background 0.25s ease;
+}
+
+.rights-accordion summary::-webkit-details-marker {
+    display: none;
+}
+
+.rights-accordion summary:hover {
+    background: rgba(111, 35, 48, 0.045);
+}
+
+.accordion-number {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    color: #967579;
+}
+
+.accordion-title {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.55rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+
+    color: #471721;
+}
+
+.accordion-symbol {
+    font-family: "DM Mono", monospace;
+
+    font-size: 1.2rem;
+
+    color: #7a2635;
+
+    transition: transform 0.25s ease;
+}
+
+.rights-accordion details[open] .accordion-symbol {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    width: 100%;
+
+    max-width: 820px;
+
+    padding: 0 70px 45px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.12rem;
+
+    line-height: 1.65;
+
+    color: #493438;
+
+    animation: accordionOpen 0.25s ease;
+}
+
+.accordion-content p {
+    margin: 0 0 20px;
+}
+
+.accordion-intro {
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    color: #7a2635;
+}
+
+@keyframes accordionOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   LAW TIMELINE
+========================================================= */
+
+.law-timeline {
+    margin-top: 35px;
+
+    border-left: 1px solid #7a2635;
+}
+
+.law-step {
+    display: grid;
+
+    grid-template-columns: 55px 1fr;
+
+    gap: 20px;
+
+    position: relative;
+
+    padding: 0 0 35px 25px;
+}
+
+.law-step > span {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-left: -42px;
+
+    background: #eee7dc;
+
+    border: 1px solid #7a2635;
+
+    border-radius: 50%;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+
+    color: #7a2635;
+}
+
+.law-step h4,
+.law-type h4 {
+    margin: 0 0 8px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.1em;
+
+    color: #6f2330;
+}
+
+.law-step p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   LAW TYPES
+========================================================= */
+
+.law-types {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 35px;
+}
+
+.law-type {
+    display: grid;
+
+    grid-template-columns: 55px 1fr;
+
+    gap: 20px;
+}
+
+.law-type-number {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    color: #8a656a;
+}
+
+
+/* =========================================================
+   COURT COMPARISON
+========================================================= */
+
+.court-comparison {
+    display: grid;
+
+    grid-template-columns: 1fr 80px 1fr;
+
+    align-items: center;
+
+    margin: 35px 0;
+
+    border-top: 1px solid rgba(71, 23, 33, 0.25);
+
+    border-bottom: 1px solid rgba(71, 23, 33, 0.25);
+}
+
+.court-column {
+    padding: 35px 20px;
+}
+
+.court-column > span {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.12em;
+
+    color: #8a656a;
+}
+
+.court-column h4 {
+    margin: 8px 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.8rem;
+
+    color: #541b26;
+}
+
+.court-column p {
+    margin: 0;
+}
+
+.court-divider {
+    text-align: center;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    color: #7a2635;
+}
+
+
+/* =========================================================
+   COURT ROLES
+========================================================= */
+
+.court-roles {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+}
+
+.court-role {
+    padding: 25px;
+
+    border: 1px solid rgba(71, 23, 33, 0.2);
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.court-role h4 {
+    margin: 0 0 10px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.1em;
+
+    color: #7a2635;
+}
+
+.court-role p {
+    margin: 0;
+}
+
+
+/* =========================================================
+   COURT FLOW
+========================================================= */
+
+.court-flow {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin: 30px 0 50px;
+
+    padding: 25px 0;
+
+    border-top: 1px solid rgba(71, 23, 33, 0.25);
+
+    border-bottom: 1px solid rgba(71, 23, 33, 0.25);
+}
+
+.court-flow > div:not(.flow-arrow) {
+    text-align: center;
+
+    max-width: 150px;
+}
+
+.court-flow span {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+
+    color: #967579;
+}
+
+.court-flow strong {
+    display: block;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.05em;
+
+    color: #541b26;
+}
+
+.court-flow p {
+    margin: 8px 0 0;
+
+    font-size: 0.95rem;
+}
+
+.flow-arrow {
+    font-size: 1.3rem;
+
+    color: #7a2635;
+}
+
+
+/* =========================================================
+   PEOPLE'S BRIEFS
+========================================================= */
+
+.peoples-briefs {
+    width: 100%;
+
+    position: relative;
+
+    padding: 125px 7vw;
+
+    background: #451720;
+
+    color: #f5f0e8;
+}
+
+.peoples-briefs .rights-page-number {
+    color: rgba(245, 240, 232, 0.45);
+}
+
+.peoples-briefs .rights-section-label {
+    color: #d6aeb3;
+}
+
+.briefs-inner {
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+}
+
+.peoples-briefs h2 {
+    margin: 0 0 25px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3.5rem, 7vw, 6rem);
+
+    line-height: 0.8;
+
+    font-weight: 600;
+}
+
+.peoples-briefs h2 em {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-weight: 400;
+
+    color: #d7aab1;
+}
+
+.briefs-description {
+    max-width: 720px;
+
+    margin-bottom: 60px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.25rem;
+
+    line-height: 1.55;
+
+    color: #eadfe0;
+}
+
+
+/* =========================================================
+   CURRENT BRIEF
+========================================================= */
+
+.current-brief {
+    width: 100%;
+
+    border: 1px solid rgba(245, 240, 232, 0.35);
+
+    background: #f5f0e8;
+
+    color: #451720;
+}
+
+.brief-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 18px 25px;
+
+    border-bottom: 1px solid rgba(71, 23, 33, 0.25);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.08em;
+
+    color: #7a2635;
+}
+
+.brief-main {
+    display: grid;
+
+    grid-template-columns: 160px 1fr;
+
+    gap: 45px;
+
+    padding: 60px;
+}
+
+.brief-icon {
+    width: 130px;
+    height: 130px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #7a2635;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 5rem;
+
+    color: #7a2635;
+
+    transform: rotate(-5deg);
+}
+
+.brief-label {
+    margin: 0 0 8px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.12em;
+
+    color: #8a656a;
+}
+
+.brief-title-area h3 {
+    margin: 0 0 20px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3rem, 6vw, 5rem);
+
+    line-height: 0.82;
+
+    font-weight: 600;
+}
+
+.brief-title-area h3 em {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-weight: 400;
+
+    color: #7a2635;
+}
+
+.brief-title-area p:not(.brief-label) {
+    max-width: 700px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.15rem;
+
+    line-height: 1.55;
+}
+
+.brief-cases {
+    padding: 30px 60px;
+
+    border-top: 1px solid rgba(71, 23, 33, 0.2);
+}
+
+.brief-cases > p {
+    margin: 0 0 20px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.1em;
+
+    color: #7a2635;
+}
+
+.case-placeholders {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.case-placeholders span {
+    padding: 10px 14px;
+
+    border: 1px solid rgba(71, 23, 33, 0.3);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+
+    color: #5a2a32;
+}
+
+.brief-footer {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 18px 25px;
+
+    background: #eee7dc;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.08em;
+}
+
+.brief-footer strong {
+    color: #7a2635;
+}
+
+
+/* =========================================================
+   SUGGEST SECTION
+========================================================= */
+
+.suggest-section {
+    width: 100%;
+
+    position: relative;
+
+    padding: 125px 7vw;
+
+    background: #eee7dc;
+}
+
+.suggest-inner {
+    width: min(1100px, 100%);
+
+    margin: 0 auto;
+}
+
+.suggest-section h2 {
+    max-width: 900px;
+
+    margin: 0 0 65px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3.5rem, 7vw, 6rem);
+
+    line-height: 0.82;
+
+    font-weight: 600;
+
+    color: #471721;
+}
+
+.suggest-section h2 em {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-weight: 400;
+
+    color: #7a2635;
+}
+
+.suggest-grid {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+}
+
+.question-mark {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 11rem;
+
+    line-height: 0.7;
+
+    color: rgba(111, 35, 48, 0.18);
+}
+
+.suggest-heading h3 {
+    margin-top: 30px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.8rem;
+
+    letter-spacing: 0.12em;
+
+    color: #7a2635;
+}
+
+.suggest-copy {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.2rem;
+
+    line-height: 1.55;
+}
+
+.suggest-requirements {
+    padding: 20px;
+
+    border-left: 2px solid #7a2635;
+
+    font-size: 1rem;
+
+    color: #60464a;
+}
+
+.rights-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 15px 22px;
+
+    background: #641e2b;
+
+    color: #f5f0e8;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.08em;
+
+    transition: all 0.25s ease;
+}
+
+.rights-button:hover {
+    background: #8b2635;
+
+    transform: translateY(-2px);
+}
+
+.first-come {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+
+    color: #8a656a;
+}
+
+
+/* =========================================================
+   ENDING
+========================================================= */
+
+.rights-ending {
+    width: 100%;
+
+    padding: 120px 7vw 80px;
+
+    text-align: center;
+
+    background: #f5f0e8;
+}
+
+.ending-star {
+    margin-bottom: 20px;
+
+    font-size: 1.4rem;
+
+    color: #7a2635;
+}
+
+.rights-ending h2 {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3.5rem, 8vw, 7rem);
+
+    line-height: 0.8;
+
+    font-weight: 600;
+
+    color: #471721;
+}
+
+.rights-ending h2 span {
+    display: block;
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-weight: 400;
+
+    color: #7a2635;
+}
+
+.rights-ending > p:not(.rights-section-label) {
+    max-width: 500px;
+
+    margin: 45px auto 35px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.35rem;
+
+    line-height: 1.5;
+}
+
+.ending-line {
+    width: 100px;
+
+    height: 1px;
+
+    margin: 40px auto;
+
+    background: #7a2635;
+}
+
+.publication-mark {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.12em;
+
+    color: #7a2635;
+}
+
+.ending-tagline {
+    margin-top: 12px;
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    color: #7c5c60;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.rights-footer {
+    width: 100%;
+
+    padding: 50px 7vw 30px;
+
+    background: #301116;
+
+    color: #f5f0e8;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 35px;
+}
+
+.rights-footer .footer-brand h3 {
+    margin: 0;
+
+    font-family: "Special Elite", cursive;
+
+    font-size: 1.4rem;
+}
+
+.rights-footer .footer-brand p {
+    margin: 6px 0 0;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.1em;
+
+    color: #c9a6aa;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.footer-links a {
+    color: #e8dadd;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.08em;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-contact {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+}
+
+.footer-contact span {
+    color: #c39ba0;
+}
+
+.footer-contact a {
+    color: #f5f0e8;
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 30px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(245, 240, 232, 0.15);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.55rem;
+
+    color: #aa878b;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .rights-nav {
+        padding: 18px 5vw;
+
+        flex-wrap: wrap;
+    }
+
+    .rights-nav-links {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
+    .rights-hero {
+        min-height: 600px;
+    }
+
+    .rights-hero-frame {
+        inset: 20px;
+    }
+
+    .rights-hero h1 {
+        font-size: clamp(4rem, 16vw, 7rem);
+    }
+
+    .rights-intro-grid,
+    .suggest-grid {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .rights-intro-large p {
+        font-size: 1.7rem;
+    }
+
+    .court-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .court-divider {
+        padding: 10px;
+
+        border-top: 1px solid rgba(71, 23, 33, 0.2);
+
+        border-bottom: 1px solid rgba(71, 23, 33, 0.2);
+    }
+
+    .court-roles {
+        grid-template-columns: 1fr;
+    }
+
+    .court-flow {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .brief-main {
+        grid-template-columns: 1fr;
+
+        padding: 40px;
+    }
+
+    .brief-icon {
+        width: 90px;
+
+        height: 90px;
+
+        font-size: 3.5rem;
+    }
+
+    .brief-cases {
+        padding: 25px 40px;
+    }
+
+    .rights-footer {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* =========================================================
+   PHONE
+========================================================= */
+
+@media (max-width: 550px) {
+
+    .rights-nav {
+        align-items: flex-start;
+    }
+
+    .rights-nav-links {
+        justify-content: flex-start;
+    }
+
+    .language-button {
+        width: 100%;
+    }
+
+    .rights-hero {
+        min-height: 560px;
+    }
+
+    .rights-hero-frame {
+        inset: 15px;
+    }
+
+    .rights-hero-frame::before {
+        inset: 8px;
+    }
+
+    .rights-hero-content {
+        width: 88%;
+    }
+
+    .rights-hero-description {
+        font-size: 1.1rem;
+    }
+
+    .rights-hero-mark {
+        right: 8%;
+        top: 10%;
+        font-size: 3rem;
+    }
+
+    .decoration-one {
+        left: 8%;
+        top: 18%;
+    }
+
+    .decoration-two {
+        right: 6%;
+        bottom: 12%;
+        font-size: 5rem;
+    }
+
+    .rights-introduction,
+    .rights-topic-section,
+    .peoples-briefs,
+    .suggest-section {
+        padding: 85px 6vw;
+    }
+
+    .rights-page-number {
+        top: 30px;
+        right: 6vw;
+    }
+
+    .rights-accordion summary {
+        grid-template-columns: 35px 1fr 25px;
+
+        min-height: 80px;
+    }
+
+    .accordion-title {
+        font-size: 1.15rem;
+    }
+
+    .accordion-content {
+        padding: 0 0 35px 35px;
+
+        font-size: 1.05rem;
+    }
+
+    .law-step {
+        grid-template-columns: 30px 1fr;
+    }
+
+    .law-step > span {
+        margin-left: -36px;
+    }
+
+    .brief-header,
+    .brief-footer {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .brief-main {
+        padding: 30px 25px;
+    }
+
+    .brief-cases {
+        padding: 25px;
+    }
+
+    .rights-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+}
+/* =========================================================
+   INTRODUCTION — VISUAL LEAD-IN
+========================================================= */
+
+.intro-lead {
+    margin: 0 0 35px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    line-height: 1.2;
+
+    color: #4b1923;
+}
+
+.intro-list {
+    list-style: none;
+
+    margin: 45px 0 0 0;
+    padding: 0;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.intro-list li {
+    display: grid;
+    grid-template-columns: 45px 1fr;
+
+    position: relative;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid rgba(71, 23, 33, 0.2);
+}
+
+.intro-list li span {
+    font-family: "DM Mono", monospace;
+    font-size: 0.62rem;
+
+    color: #967579;
+
+    padding-top: 3px;
+}
+
+.intro-list li strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-family: "DM Mono", monospace;
+    font-size: 0.68rem;
+
+    letter-spacing: 0.1em;
+
+    color: #7a2635;
+}
+
+.intro-list li p {
+    margin: 0;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1rem;
+    line-height: 1.35;
+
+    color: #60464a;
+}
+/* =====================================================
+   INTRODUCTION — LEAD + LIST
+===================================================== */
+
+.intro-lead {
+    margin: 0 0 4rem 0;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.55rem;
+    line-height: 1.45;
+    font-weight: 500;
+}
+
+
+/* LIST OF WHAT YOUNG PEOPLE ENCOUNTER */
+
+.intro-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+.intro-list li {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+
+    padding: 1rem 0;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+
+.intro-list li span {
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    opacity: 0.6;
+    min-width: 25px;
+}
+
+
+.intro-list li strong {
+    font-family: "DM Mono", monospace;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    font-weight: 500;
+}
+
+
+/* LITTLE HOVER EFFECT */
+
+.intro-list li {
+    transition: transform 0.2s ease, padding-left 0.2s ease;
+}
+
+.intro-list li:hover {
+    transform: translateX(6px);
+    padding-left: 6px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .intro-lead {
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+    }
+
+    .intro-list li {
+        padding: 0.85rem 0;
+    }
+
+}

@@ -1,0 +1,672 @@
+/* =========================================================
+   THE PEOPLE'S PAGES ARCHIVE
+   VOISA
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.pages-page {
+    background: #f7f0e8;
+    color: #4a111c;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.pages-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 6%;
+
+    border-bottom: 1px solid rgba(74, 17, 28, 0.22);
+
+    background: #f7f0e8;
+}
+
+.pages-logo a {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: #4a111c;
+    text-decoration: none;
+}
+
+.pages-nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.pages-nav-links a {
+    font-family: "DM Mono", monospace;
+    font-size: 0.72rem;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #4a111c;
+
+    transition: opacity 0.3s ease;
+}
+
+.pages-nav-links a:hover {
+    opacity: 0.55;
+}
+
+.pages-language-button {
+    font-family: "DM Mono", monospace;
+    font-size: 0.68rem;
+
+    color: #4a111c;
+    text-decoration: none;
+
+    border-bottom: 1px solid #4a111c;
+
+    padding-bottom: 4px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.pages-hero {
+    position: relative;
+
+    text-align: center;
+
+    padding: 130px 8% 115px;
+
+    border-bottom: 1px solid rgba(74, 17, 28, 0.22);
+
+    overflow: hidden;
+
+    background: #641522;
+}
+
+.pages-hero-decoration {
+    position: absolute;
+
+    top: 45px;
+    right: 9%;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 5rem;
+
+    color: #e8c9b8;
+
+    opacity: 0.22;
+}
+
+.pages-eyebrow {
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+
+    letter-spacing: 0.18em;
+
+    color: #f7e8df;
+}
+
+.pages-small-line {
+    width: 70px;
+    height: 1px;
+
+    margin: 25px auto;
+
+    background: #e8c9b8;
+}
+
+.pages-hero h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(4rem, 9vw, 8rem);
+
+    line-height: 0.82;
+
+    font-weight: 500;
+
+    margin: 25px 0;
+
+    color: #f7e8df;
+}
+
+.pages-hero h1 span {
+    display: block;
+
+    font-style: italic;
+}
+
+.pages-hero-line {
+    width: 120px;
+    height: 1px;
+
+    margin: 35px auto;
+
+    background: #e8c9b8;
+}
+
+.pages-hero-description {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    color: #f7e8df;
+}
+
+.pages-publication {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+
+    margin-top: 45px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.1em;
+
+    color: #e8c9b8;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.pages-introduction {
+    position: relative;
+
+    padding: 110px 8%;
+
+    border-bottom: 1px solid rgba(74, 17, 28, 0.22);
+
+    background: #f7f0e8;
+}
+
+.pages-page-number {
+    position: absolute;
+
+    top: 45px;
+    right: 7%;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    opacity: 0.5;
+}
+
+.pages-intro-inner {
+    max-width: 900px;
+    margin: auto;
+}
+
+.pages-section-label {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.18em;
+
+    color: #7a1e2d;
+}
+
+.pages-introduction h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    margin: 25px 0;
+
+    color: #4a111c;
+}
+
+.pages-introduction h2 em {
+    display: block;
+
+    font-style: italic;
+
+    color: #7a1e2d;
+}
+
+.pages-intro-text {
+    max-width: 680px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+
+    color: #5b3038;
+}
+
+
+/* =========================================================
+   ARCHIVE
+========================================================= */
+
+.pages-archive {
+    padding: 100px 7%;
+
+    background: #eadbd0;
+}
+
+.pages-archive-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 45px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid rgba(74, 17, 28, 0.28);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.1em;
+
+    color: #4a111c;
+}
+
+.pages-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   EDITION CARDS
+========================================================= */
+
+.page-edition-card {
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 35px;
+
+    border: 1px solid rgba(74, 17, 28, 0.28);
+
+    background: rgba(255, 248, 242, 0.58);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.page-edition-card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255, 248, 242, 0.9);
+}
+
+.page-edition-number {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    color: #7a1e2d;
+
+    opacity: 0.7;
+}
+
+.page-edition-content {
+    margin-top: 60px;
+}
+
+.page-edition-status {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.14em;
+
+    margin-bottom: 18px;
+
+    color: #7a1e2d;
+}
+
+.page-edition-card h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2.5rem;
+
+    line-height: 0.95;
+
+    font-weight: 600;
+
+    margin: 0 0 18px;
+
+    color: #4a111c;
+}
+
+.page-edition-description {
+    font-family: "Playfair Display", serif;
+
+    font-size: 0.88rem;
+
+    line-height: 1.65;
+
+    margin: 25px 0;
+
+    color: #5b3038;
+}
+
+.page-edition-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 12px 20px;
+
+    border: 1px solid #7a1e2d;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    color: #7a1e2d;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.page-edition-button:hover {
+    background: #7a1e2d;
+
+    color: #f7f0e8;
+}
+
+.page-edition-button.disabled {
+    opacity: 0.4;
+
+    cursor: default;
+}
+
+
+/* =========================================================
+   AVAILABLE EDITION
+========================================================= */
+
+.page-edition-card.available {
+    border: 2px solid #7a1e2d;
+
+    background: #f5e6df;
+}
+
+.page-edition-card.available .page-edition-status {
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   ENDING
+========================================================= */
+
+.pages-ending {
+    text-align: center;
+
+    padding: 120px 8%;
+
+    border-top: 1px solid rgba(74, 17, 28, 0.22);
+
+    background: #f7f0e8;
+}
+
+.pages-ending-star {
+    font-size: 2rem;
+
+    margin-bottom: 30px;
+
+    color: #8f2638;
+}
+
+.pages-ending h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    margin: 25px 0;
+
+    color: #4a111c;
+}
+
+.pages-ending h2 em {
+    display: block;
+
+    font-style: italic;
+
+    color: #7a1e2d;
+}
+
+.pages-ending > p:not(.pages-section-label) {
+    font-family: "Playfair Display", serif;
+
+    line-height: 1.8;
+
+    color: #5b3038;
+}
+
+.pages-ending-line {
+    width: 100px;
+    height: 1px;
+
+    margin: 35px auto;
+
+    background: #7a1e2d;
+}
+
+.pages-publication-mark {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.12em;
+
+    color: #7a1e2d;
+}
+
+.pages-tagline {
+    margin-top: 20px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.2rem;
+
+    font-style: italic;
+
+    color: #4a111c;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.pages-footer {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 40px;
+
+    padding: 60px 7% 30px;
+
+    border-top: 1px solid rgba(247, 240, 232, 0.18);
+
+    background: #3a0b14;
+
+    color: #f7f0e8;
+}
+
+.pages-footer .footer-brand h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    margin: 0;
+
+    color: #f7f0e8;
+}
+
+.pages-footer .footer-brand p {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.1em;
+
+    color: #d9aaa5;
+}
+
+.pages-footer .footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.pages-footer .footer-links a {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    color: #f7f0e8;
+
+    text-decoration: none;
+}
+
+.pages-footer .footer-contact {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.pages-footer .footer-contact span {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    color: #d9aaa5;
+}
+
+.pages-footer .footer-contact a {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    color: #f7f0e8;
+}
+
+.pages-footer .footer-bottom {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 30px;
+
+    margin-top: 20px;
+
+    border-top: 1px solid rgba(247, 240, 232, 0.15);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 0.08em;
+
+    color: #d9aaa5;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .pages-nav {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .pages-nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .pages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pages-footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .pages-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pages-publication {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .pages-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .pages-footer .footer-bottom {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+}

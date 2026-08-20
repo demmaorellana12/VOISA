@@ -1,0 +1,1133 @@
+/* =========================================================
+   VOISA — THE PEOPLE'S PAGES
+   EDITION 001 — BECOMING
+========================================================= */
+
+:root {
+    --burgundy: #54151d;
+    --deep-burgundy: #330b12;
+    --wine: #711f29;
+    --red: #8d3038;
+
+    --cream: #f4ead6;
+    --paper: #ead9ba;
+    --light-paper: #f7efdf;
+    --aged-paper: #d8c49d;
+
+    --ink: #2a1815;
+    --soft-ink: #51332c;
+
+    --gold: #a98252;
+    --rose: #9e4750;
+
+    --shadow: rgba(42, 15, 15, 0.25);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at 20% 10%,
+            rgba(141, 48, 56, 0.12),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(113, 31, 41, 0.10),
+            transparent 30%
+        ),
+        var(--cream);
+
+    color: var(--ink);
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.top-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 15px 5vw;
+
+    background: var(--deep-burgundy);
+    color: var(--cream);
+
+    border-bottom: 1px solid rgba(244, 234, 214, 0.25);
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.nav-logo {
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.4rem;
+
+    letter-spacing: 0.22em;
+}
+
+.nav-links {
+    display: flex;
+
+    gap: 25px;
+
+    align-items: center;
+}
+
+.nav-links a {
+    color: var(--cream);
+
+    text-decoration: none;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    opacity: 0.85;
+
+    transition: 0.25s;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+
+    color: #fff;
+}
+
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+.page {
+    position: relative;
+
+    overflow: hidden;
+}
+
+section {
+    position: relative;
+
+    padding: 110px 8vw;
+}
+
+.inner {
+    max-width: 1180px;
+
+    margin: auto;
+}
+
+p {
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   DECORATIVE FLOWERS / STARS
+========================================================= */
+
+.flower {
+    position: absolute;
+
+    color: var(--rose);
+
+    font-size: 3rem;
+
+    opacity: 0.75;
+
+    pointer-events: none;
+
+    transform: rotate(-12deg);
+}
+
+.flower.one {
+    top: 35px;
+
+    left: 4%;
+}
+
+.flower.two {
+    bottom: 40px;
+
+    right: 5%;
+
+    transform: rotate(20deg);
+}
+
+.flower.three {
+    top: 45%;
+
+    right: 3%;
+
+    font-size: 2rem;
+
+    transform: rotate(10deg);
+}
+
+.star {
+    color: var(--gold);
+
+    font-family: Georgia, serif;
+}
+
+
+/* =========================================================
+   PAPER TEXTURE
+========================================================= */
+
+.paper {
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(113, 31, 41, 0.05),
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(42, 24, 21, 0.05),
+            transparent 25%
+        ),
+        var(--light-paper);
+
+    border: 1px solid rgba(84, 21, 29, 0.25);
+
+    box-shadow:
+        8px 10px 0 rgba(84, 21, 29, 0.08),
+        0 15px 35px var(--shadow);
+}
+
+.paper::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 9px;
+
+    border: 1px solid rgba(169, 130, 82, 0.45);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 78vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 120px 6vw;
+
+    color: var(--cream);
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(158, 71, 80, 0.3),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(113, 31, 41, 0.4),
+            transparent 30%
+        ),
+        var(--deep-burgundy);
+
+    border-bottom: 8px double rgba(244, 234, 214, 0.25);
+}
+
+.hero::before,
+.hero::after {
+    content: "✦";
+
+    position: absolute;
+
+    color: var(--gold);
+
+    font-size: 4rem;
+
+    opacity: 0.7;
+}
+
+.hero::before {
+    top: 70px;
+
+    left: 9%;
+}
+
+.hero::after {
+    bottom: 70px;
+
+    right: 9%;
+}
+
+.hero-card {
+    position: relative;
+
+    max-width: 1000px;
+
+    width: 100%;
+
+    padding: 75px 50px;
+
+    border: 1px solid rgba(244, 234, 214, 0.45);
+
+    outline: 1px solid rgba(169, 130, 82, 0.55);
+
+    outline-offset: -13px;
+}
+
+.hero-small {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.3em;
+
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    margin: 20px 0 10px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(3.5rem, 9vw, 7rem);
+
+    line-height: 0.9;
+
+    letter-spacing: -0.04em;
+
+    text-transform: uppercase;
+}
+
+.hero-script {
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-size: clamp(1.3rem, 3vw, 2rem);
+}
+
+.hero-tagline {
+    margin-top: 35px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.15em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   SECTION HEADERS
+========================================================= */
+
+.section-label {
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.2em;
+
+    text-transform: uppercase;
+
+    color: var(--rose);
+}
+
+h2 {
+    margin: 0 0 40px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: 1;
+
+    color: var(--burgundy);
+}
+
+h3 {
+    font-family: "Playfair Display", serif;
+
+    color: var(--burgundy);
+
+    margin-top: 0;
+}
+
+
+/* =========================================================
+   PEOPLE'S PAGES INTRO
+========================================================= */
+
+.intro-section {
+    background: var(--cream);
+}
+
+.intro-paper {
+    padding: 70px 8%;
+
+    transform: rotate(-0.3deg);
+}
+
+.intro-paper h2 {
+    max-width: 650px;
+}
+
+.intro-body {
+    max-width: 850px;
+
+    font-size: 1.2rem;
+}
+
+.intro-final {
+    margin-top: 45px;
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-size: 1.7rem;
+
+    color: var(--burgundy);
+}
+
+
+/* =========================================================
+   BECOMING
+========================================================= */
+
+.edition-section {
+    background: var(--burgundy);
+
+    color: var(--cream);
+}
+
+.edition-section h2 {
+    color: var(--cream);
+}
+
+.edition-section .edition-title {
+    color: var(--burgundy);
+}
+
+.edition-paper {
+    padding: 70px 8%;
+
+    background:
+        linear-gradient(
+            rgba(247, 239, 223, 0.94),
+            rgba(247, 239, 223, 0.94)
+        ),
+        var(--paper);
+
+    color: var(--ink);
+
+    transform: rotate(0.25deg);
+}
+
+.edition-number {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.25em;
+
+    color: var(--rose);
+}
+
+.edition-title {
+    font-size: clamp(4rem, 10vw, 8rem);
+
+    margin: 5px 0 45px;
+
+    color: var(--burgundy);
+
+    line-height: 0.8;
+}
+
+.edition-body {
+    max-width: 850px;
+
+    font-size: 1.15rem;
+}
+
+.edition-quote {
+    margin: 50px 0;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border-top: 1px solid var(--gold);
+
+    border-bottom: 1px solid var(--gold);
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-size: 1.8rem;
+
+    color: var(--burgundy);
+}
+
+
+/* =========================================================
+   SUBMISSION TYPES
+========================================================= */
+
+.categories-section {
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(141, 48, 56, 0.1),
+            transparent 30%
+        ),
+        var(--cream);
+}
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.category-card {
+    position: relative;
+
+    min-height: 250px;
+
+    padding: 40px;
+
+    background: var(--light-paper);
+
+    border: 1px solid rgba(84, 21, 29, 0.3);
+
+    box-shadow: 5px 6px 0 rgba(84, 21, 29, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-7px) rotate(-0.5deg);
+
+    box-shadow:
+        9px 12px 0 rgba(84, 21, 29, 0.12),
+        0 15px 25px rgba(42, 24, 21, 0.15);
+}
+
+.category-card:nth-child(2) {
+    transform: rotate(0.7deg);
+}
+
+.category-card:nth-child(2):hover {
+    transform: translateY(-7px) rotate(0.2deg);
+}
+
+.category-card:nth-child(3) {
+    transform: rotate(-0.6deg);
+}
+
+.category-card:nth-child(4) {
+    transform: rotate(0.4deg);
+}
+
+.category-icon {
+    font-size: 2.3rem;
+
+    margin-bottom: 15px;
+
+    color: var(--rose);
+}
+
+.category-card h3 {
+    font-size: 2rem;
+
+    margin-bottom: 10px;
+}
+
+.category-card p {
+    margin-bottom: 0;
+}
+
+.category-note {
+    margin-top: 40px;
+
+    text-align: center;
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-size: 1.3rem;
+}
+
+
+/* =========================================================
+   GUIDELINES
+========================================================= */
+
+.guidelines-section {
+    background: var(--deep-burgundy);
+
+    color: var(--cream);
+}
+
+.guidelines-section h2 {
+    color: var(--burgundy);
+}
+
+.guideline-paper {
+    padding: 60px 8%;
+
+    background: var(--light-paper);
+
+    color: var(--ink);
+
+    transform: rotate(-0.4deg);
+}
+
+.guideline-list {
+    list-style: none;
+
+    padding: 0;
+
+    margin: 35px 0;
+}
+
+.guideline-list li {
+    position: relative;
+
+    padding-left: 35px;
+
+    margin-bottom: 18px;
+}
+
+.guideline-list li::before {
+    content: "✦";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--rose);
+}
+
+.thats-it {
+    display: inline-block;
+
+    margin: 25px 0;
+
+    padding: 8px 25px;
+
+    border-bottom: 2px solid var(--rose);
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-size: 2rem;
+
+    color: var(--burgundy);
+}
+
+.guideline-ending {
+    max-width: 800px;
+
+    font-size: 1.15rem;
+}
+
+
+/* =========================================================
+   SAMPLE POEM
+========================================================= */
+
+.sample-section {
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(141, 48, 56, 0.12),
+            transparent 25%
+        ),
+        var(--cream);
+}
+
+.sample-intro {
+    max-width: 800px;
+
+    margin-bottom: 50px;
+}
+
+.sample-note {
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-size: 1.2rem;
+
+    color: var(--soft-ink);
+}
+
+.poem-frame {
+    position: relative;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 60px 7%;
+
+    background:
+        linear-gradient(
+            rgba(247, 239, 223, 0.96),
+            rgba(247, 239, 223, 0.96)
+        );
+
+    border: 2px solid var(--gold);
+
+    box-shadow:
+        0 0 0 10px rgba(216, 196, 157, 0.45),
+        0 20px 45px rgba(42, 24, 21, 0.2);
+}
+
+.poem-frame::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 15px;
+
+    left: 20px;
+
+    color: var(--rose);
+
+    font-size: 1.5rem;
+}
+
+.poem-frame::after {
+    content: "✦";
+
+    position: absolute;
+
+    bottom: 15px;
+
+    right: 20px;
+
+    color: var(--rose);
+
+    font-size: 1.5rem;
+}
+
+.poem-title {
+    margin-bottom: 45px;
+
+    text-align: center;
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-size: clamp(2rem, 4vw, 3.2rem);
+
+    color: var(--burgundy);
+}
+
+.poem {
+    column-count: 2;
+
+    column-gap: 80px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.25rem;
+
+    line-height: 1.65;
+}
+
+.stanza {
+    break-inside: avoid;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   SUBMISSION PROCESS
+========================================================= */
+
+.process-section {
+    background: var(--paper);
+}
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.process-step {
+    position: relative;
+
+    padding: 35px 30px;
+
+    background: var(--light-paper);
+
+    border-top: 5px solid var(--burgundy);
+
+    box-shadow: 4px 5px 0 rgba(84, 21, 29, 0.1);
+}
+
+.process-number {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.75rem;
+
+    color: var(--rose);
+
+    letter-spacing: 0.08em;
+}
+
+.process-step h3 {
+    font-size: 1.5rem;
+
+    margin: 12px 0;
+}
+
+.archive-line {
+    margin-top: 60px;
+
+    text-align: center;
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-size: 1.7rem;
+
+    color: var(--burgundy);
+}
+
+.dates {
+    max-width: 600px;
+
+    margin: 45px auto 0;
+
+    padding: 30px;
+
+    text-align: center;
+
+    border: 1px solid var(--gold);
+
+    background: rgba(247, 239, 223, 0.7);
+}
+
+.dates strong {
+    display: block;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.15em;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   YOUR PAGE IS WAITING
+========================================================= */
+
+.waiting-section {
+    background: var(--cream);
+
+    text-align: center;
+
+    padding-top: 140px;
+
+    padding-bottom: 140px;
+}
+
+.waiting-section h2 {
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    margin-bottom: 60px;
+}
+
+.waiting-copy {
+    max-width: 750px;
+
+    margin: auto;
+
+    font-size: 1.25rem;
+}
+
+.waiting-copy p {
+    margin-bottom: 28px;
+}
+
+.waiting-final {
+    margin-top: 55px;
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-size: 2rem;
+
+    color: var(--burgundy);
+}
+
+
+/* =========================================================
+   SUBMIT
+========================================================= */
+
+.submit-section {
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 15% 30%,
+            rgba(244, 234, 214, 0.1),
+            transparent 20%
+        ),
+        radial-gradient(
+            circle at 85% 70%,
+            rgba(169, 130, 82, 0.12),
+            transparent 25%
+        ),
+        var(--deep-burgundy);
+
+    color: var(--cream);
+
+    text-align: center;
+
+    padding: 130px 7vw;
+}
+
+.submit-section h2 {
+    color: var(--cream);
+
+    font-size: clamp(3rem, 7vw, 6rem);
+}
+
+.submit-description {
+    font-size: 1.3rem;
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+.submit-button {
+    display: inline-block;
+
+    margin-top: 45px;
+
+    padding: 20px 45px;
+
+    color: var(--burgundy);
+
+    background: var(--cream);
+
+    text-decoration: none;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.1em;
+
+    transition: 0.3s;
+
+    border: 1px solid var(--gold);
+
+    box-shadow: 6px 6px 0 var(--gold);
+}
+
+.submit-button:hover {
+    transform: translate(4px, 4px);
+
+    box-shadow: 2px 2px 0 var(--gold);
+}
+
+.publication-mark {
+    margin-top: 75px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.15em;
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   PAGE NUMBER
+========================================================= */
+
+.page-number {
+    position: absolute;
+
+    right: 35px;
+
+    bottom: 25px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+
+    color: var(--rose);
+
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    body {
+        font-size: 17px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    section {
+        padding: 80px 6vw;
+    }
+
+    .hero {
+        min-height: 75vh;
+
+        padding: 80px 5vw;
+    }
+
+    .hero-card {
+        padding: 60px 25px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 15vw, 5rem);
+    }
+
+    .category-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .category-card:nth-child(n) {
+        transform: none;
+    }
+
+    .poem {
+        column-count: 1;
+    }
+
+    .poem-frame {
+        padding: 45px 8%;
+    }
+
+    .flower {
+        opacity: 0.35;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 500px) {
+
+    .top-nav {
+        padding: 14px 6vw;
+    }
+
+    .nav-logo {
+        font-size: 1.1rem;
+    }
+
+    .hero-card {
+        outline-offset: -8px;
+    }
+
+    .intro-paper,
+    .edition-paper,
+    .guideline-paper {
+        padding: 45px 8%;
+    }
+
+    .edition-title {
+        font-size: 4rem;
+    }
+
+    .poem {
+        font-size: 1.15rem;
+    }
+
+    .submit-button {
+        padding: 17px 25px;
+    }
+}

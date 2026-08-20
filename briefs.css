@@ -1,0 +1,641 @@
+/* =========================================================
+   PEOPLE'S BRIEFS ARCHIVE
+   VOISA
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.briefs-page {
+    background: #f4eee7;
+    color: #321c20;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.briefs-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 6%;
+
+    border-bottom: 1px solid rgba(50, 28, 32, 0.25);
+
+    background: #f4eee7;
+}
+
+.briefs-logo a {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: #321c20;
+    text-decoration: none;
+}
+
+.briefs-nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.briefs-nav-links a {
+    font-family: "DM Mono", monospace;
+    font-size: 0.72rem;
+
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: #321c20;
+
+    transition: opacity 0.3s ease;
+}
+
+.briefs-nav-links a:hover {
+    opacity: 0.55;
+}
+
+.language-button {
+    font-family: "DM Mono", monospace;
+    font-size: 0.68rem;
+
+    color: #321c20;
+    text-decoration: none;
+
+    border-bottom: 1px solid #321c20;
+
+    padding-bottom: 4px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.briefs-hero {
+    position: relative;
+
+    text-align: center;
+
+    padding: 130px 8% 115px;
+
+    border-bottom: 1px solid rgba(50, 28, 32, 0.25);
+
+    overflow: hidden;
+}
+
+.briefs-hero-decoration {
+    position: absolute;
+
+    top: 55px;
+    left: 8%;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 5rem;
+
+    opacity: 0.18;
+}
+
+.briefs-eyebrow {
+    font-family: "DM Mono", monospace;
+    font-size: 0.7rem;
+
+    letter-spacing: 0.18em;
+}
+
+.briefs-small-line {
+    width: 70px;
+    height: 1px;
+
+    margin: 25px auto;
+
+    background: #321c20;
+}
+
+.briefs-hero h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(4rem, 9vw, 8rem);
+
+    line-height: 0.85;
+
+    font-weight: 500;
+
+    margin: 25px 0;
+    color: #f4eee7;
+}
+.briefs-hero .briefs-eyebrow,
+.briefs-hero .briefs-hero-description,
+.briefs-hero .briefs-publication {
+    color: #f4eee7;
+}
+.briefs-hero .briefs-small-line,
+.briefs-hero .briefs-hero-line {
+    background: #f4eee7;
+}
+.briefs-hero h1 span {
+    display: block;
+
+    font-style: italic;
+}
+
+.briefs-hero-line {
+    width: 120px;
+    height: 1px;
+
+    margin: 35px auto;
+
+    background: #321c20;
+}
+
+.briefs-hero-description {
+    max-width: 620px;
+
+    margin: auto;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+}
+
+.briefs-publication {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+
+    margin-top: 45px;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.briefs-introduction {
+    position: relative;
+
+    padding: 110px 8%;
+
+    border-bottom: 1px solid rgba(50, 28, 32, 0.25);
+}
+
+.briefs-page-number {
+    position: absolute;
+
+    top: 45px;
+    right: 7%;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    opacity: 0.55;
+}
+
+.briefs-intro-inner {
+    max-width: 900px;
+    margin: auto;
+}
+
+.briefs-section-label {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.18em;
+}
+
+.briefs-introduction h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    margin: 25px 0;
+}
+
+.briefs-introduction h2 em {
+    display: block;
+
+    font-style: italic;
+}
+
+.briefs-intro-text {
+    max-width: 650px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+   ARCHIVE
+========================================================= */
+
+.briefs-archive {
+    padding: 100px 7%;
+}
+
+.briefs-archive-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 45px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid rgba(50, 28, 32, 0.3);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.1em;
+}
+
+.briefs-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   BRIEF CARDS
+========================================================= */
+
+.brief-card {
+    position: relative;
+
+    min-height: 390px;
+
+    padding: 35px;
+
+    border: 1px solid rgba(50, 28, 32, 0.3);
+
+    background: rgba(255, 255, 255, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.brief-card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.brief-card-number {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    opacity: 0.5;
+}
+
+.brief-card-content {
+    margin-top: 60px;
+}
+
+.brief-card-status {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.14em;
+
+    margin-bottom: 18px;
+}
+
+.brief-card h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2.25rem;
+
+    line-height: 0.95;
+
+    font-weight: 600;
+
+    margin: 0 0 12px;
+}
+
+.brief-card-date {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.08em;
+
+    opacity: 0.65;
+}
+
+.brief-card-description {
+    font-family: "Playfair Display", serif;
+
+    font-size: 0.88rem;
+
+    line-height: 1.65;
+
+    margin: 25px 0;
+}
+
+.brief-card-button {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 12px 18px;
+
+    border: 1px solid #321c20;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    color: #321c20;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.brief-card-button:hover {
+    background: #321c20;
+
+    color: #f4eee7;
+}
+
+.brief-card-button.disabled {
+    opacity: 0.45;
+
+    cursor: default;
+}
+
+
+/* =========================================================
+   AVAILABLE BRIEF
+========================================================= */
+
+.brief-card.available {
+    border-width: 2px;
+}
+
+.brief-card.available .brief-card-status {
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   ENDING
+========================================================= */
+
+.briefs-ending {
+    text-align: center;
+
+    padding: 120px 8%;
+
+    border-top: 1px solid rgba(50, 28, 32, 0.25);
+}
+
+.briefs-ending-star {
+    font-size: 2rem;
+
+    margin-bottom: 30px;
+}
+
+.briefs-ending h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    margin: 25px 0;
+}
+
+.briefs-ending h2 em {
+    display: block;
+
+    font-style: italic;
+}
+
+.briefs-ending > p:not(.briefs-section-label) {
+    font-family: "Playfair Display", serif;
+
+    line-height: 1.8;
+}
+
+.briefs-ending-line {
+    width: 100px;
+    height: 1px;
+
+    margin: 35px auto;
+
+    background: #321c20;
+}
+
+.briefs-publication-mark {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.12em;
+}
+
+.briefs-tagline {
+    margin-top: 20px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.2rem;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.briefs-footer {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 40px;
+
+    padding: 60px 7% 30px;
+
+    border-top: 1px solid rgba(50, 28, 32, 0.25);
+}
+
+.footer-brand h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    margin: 0;
+}
+
+.footer-brand p {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.1em;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-links a {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    color: #321c20;
+
+    text-decoration: none;
+}
+
+.footer-contact {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.footer-contact span {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+}
+
+.footer-contact a {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    color: #321c20;
+}
+
+.footer-bottom {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 30px;
+
+    margin-top: 20px;
+
+    border-top: 1px solid rgba(50, 28, 32, 0.15);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .briefs-nav {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .briefs-nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .briefs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .briefs-footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .briefs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .briefs-publication {
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .briefs-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+}
+/* ARCHIVE HEADER + FOOTER TEXT */
+.briefs-hero,
+.briefs-hero h1,
+.briefs-hero p,
+.briefs-hero span,
+.briefs-footer,
+.briefs-footer h3,
+.briefs-footer p,
+.briefs-footer a,
+.briefs-footer span {
+    color: #f3ead7;
+}

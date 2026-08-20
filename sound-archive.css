@@ -1,0 +1,771 @@
+/* =========================================================
+   THE PEOPLE'S SOUND ARCHIVE
+   VOISA
+========================================================= */
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.sound-archive-page {
+    background: #f7efe7;
+    color: #3a171d;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.sound-archive-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 22px 6%;
+
+    background: #f7efe7;
+
+    border-bottom: 1px solid rgba(58, 23, 29, 0.22);
+}
+
+.sound-archive-logo a {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+    font-weight: 700;
+
+    color: #3a171d;
+
+    text-decoration: none;
+}
+
+.sound-archive-nav-links {
+    display: flex;
+
+    gap: 35px;
+}
+
+.sound-archive-nav-links a {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.03em;
+
+    text-transform: uppercase;
+
+    color: #3a171d;
+
+    text-decoration: none;
+
+    transition: opacity 0.3s ease;
+}
+
+.sound-archive-nav-links a:hover {
+    opacity: 0.55;
+}
+
+.sound-archive-pages-link {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.68rem;
+
+    color: #711c2b;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #711c2b;
+
+    padding-bottom: 4px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.sound-archive-hero {
+    position: relative;
+
+    text-align: center;
+
+    padding: 130px 8% 115px;
+
+    overflow: hidden;
+
+    background: #4f0f1c;
+
+    border-bottom: 1px solid rgba(58, 23, 29, 0.2);
+}
+
+.sound-archive-decoration {
+    position: absolute;
+
+    top: 45px;
+    right: 9%;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 5rem;
+
+    color: #e8c4b8;
+
+    opacity: 0.22;
+}
+
+.sound-archive-eyebrow {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 0.18em;
+
+    color: #f7e9df;
+}
+
+.sound-archive-small-line {
+    width: 70px;
+    height: 1px;
+
+    margin: 25px auto;
+
+    background: #e8c4b8;
+}
+
+.sound-archive-hero h1 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(4rem, 9vw, 8rem);
+
+    line-height: 0.82;
+
+    font-weight: 500;
+
+    margin: 25px 0;
+
+    color: #f7e9df;
+}
+
+.sound-archive-hero h1 span {
+    display: block;
+
+    font-style: italic;
+
+    color: #e8c4b8;
+}
+
+.sound-archive-hero-line {
+    width: 120px;
+    height: 1px;
+
+    margin: 35px auto;
+
+    background: #e8c4b8;
+}
+
+.sound-archive-hero-description {
+    max-width: 650px;
+
+    margin: auto;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1.05rem;
+
+    line-height: 1.8;
+
+    color: #f7e9df;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.sound-archive-introduction {
+    position: relative;
+
+    padding: 110px 8%;
+
+    background: #f7efe7;
+
+    border-bottom: 1px solid rgba(58, 23, 29, 0.2);
+}
+
+.sound-archive-page-number {
+    position: absolute;
+
+    top: 45px;
+    right: 7%;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    color: #711c2b;
+
+    opacity: 0.55;
+}
+
+.sound-archive-intro-inner {
+    max-width: 900px;
+
+    margin: auto;
+}
+
+.sound-archive-section-label {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 0.18em;
+
+    color: #711c2b;
+}
+
+.sound-archive-intro-inner h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    margin: 25px 0;
+
+    color: #3a171d;
+}
+
+.sound-archive-intro-inner h2 em {
+    display: block;
+
+    font-style: italic;
+
+    color: #8a2638;
+}
+
+.sound-archive-intro-text {
+    max-width: 680px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+
+    color: #4b292e;
+}
+
+
+/* =========================================================
+   ARCHIVE CONTENT
+========================================================= */
+
+.sound-archive-content {
+    padding: 100px 7%;
+
+    background: #eadbd2;
+}
+
+
+/* =========================================================
+   ARCHIVE SECTION
+========================================================= */
+
+.sound-archive-section {
+    margin-bottom: 120px;
+}
+
+.sound-archive-section:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   ARCHIVE HEADER
+========================================================= */
+
+.sound-archive-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 45px;
+
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid rgba(58, 23, 29, 0.3);
+}
+
+.sound-archive-header h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(2.8rem, 5vw, 4.8rem);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    margin: 15px 0 0;
+
+    color: #3a171d;
+}
+
+.sound-archive-header h2 em {
+    display: block;
+
+    font-style: italic;
+
+    color: #711c2b;
+}
+
+.sound-archive-header > span {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.12em;
+
+    color: #711c2b;
+
+    padding-bottom: 8px;
+}
+
+
+/* =========================================================
+   ARCHIVE GRID
+========================================================= */
+
+.sound-archive-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+/* =========================================================
+   ARCHIVE CARDS
+========================================================= */
+
+.sound-archive-card {
+    position: relative;
+
+    min-height: 370px;
+
+    padding: 35px;
+
+    border: 1px solid rgba(58, 23, 29, 0.28);
+
+    background: rgba(255, 247, 241, 0.62);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.sound-archive-card:hover {
+    transform: translateY(-6px);
+
+    background: rgba(255, 247, 241, 0.92);
+
+    border-color: rgba(113, 28, 43, 0.55);
+}
+
+.sound-card-number {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.7rem;
+
+    color: #8a2638;
+
+    opacity: 0.7;
+}
+
+.sound-card-content {
+    margin-top: 55px;
+}
+
+.sound-card-status {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.62rem;
+
+    letter-spacing: 0.14em;
+
+    margin-bottom: 18px;
+
+    color: #711c2b;
+}
+
+.sound-card-content h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2.5rem;
+
+    line-height: 0.95;
+
+    font-weight: 600;
+
+    margin: 0 0 15px;
+
+    color: #3a171d;
+}
+
+.sound-card-date {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.63rem;
+
+    letter-spacing: 0.08em;
+
+    color: #7b5557;
+
+    opacity: 0.8;
+}
+
+.sound-card-description {
+    font-family: "Playfair Display", serif;
+
+    font-size: 0.88rem;
+
+    line-height: 1.65;
+
+    margin: 25px 0;
+
+    color: #4b292e;
+}
+
+
+/* =========================================================
+   CARD BUTTON
+========================================================= */
+
+.sound-card-button {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 12px 20px;
+
+    border: 1px solid #711c2b;
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.04em;
+
+    color: #711c2b;
+
+    text-decoration: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.sound-card-button:hover {
+    background: #711c2b;
+
+    color: #f7efe7;
+}
+
+.sound-card-button.disabled {
+    opacity: 0.4;
+
+    cursor: default;
+}
+
+
+/* =========================================================
+   AVAILABLE CARD
+========================================================= */
+
+.sound-archive-card.available {
+    border: 2px solid #711c2b;
+
+    background: #f9e9e2;
+}
+
+.sound-archive-card.available:hover {
+    border-color: #5b101e;
+
+    background: #fff1eb;
+}
+
+.sound-archive-card.available .sound-card-status {
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   SONG SECTION
+========================================================= */
+
+.songs-section {
+    padding-top: 20px;
+}
+
+
+/* =========================================================
+   ENDING
+========================================================= */
+
+.sound-archive-ending {
+    text-align: center;
+
+    padding: 120px 8%;
+
+    background: #f7efe7;
+
+    border-top: 1px solid rgba(58, 23, 29, 0.22);
+}
+
+.sound-ending-symbol {
+    font-size: 2rem;
+
+    margin-bottom: 30px;
+
+    color: #8a2638;
+}
+
+.sound-archive-ending h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    margin: 25px 0;
+
+    color: #3a171d;
+}
+
+.sound-archive-ending h2 em {
+    display: block;
+
+    font-style: italic;
+
+    color: #711c2b;
+}
+
+.sound-archive-ending > p:not(.sound-archive-section-label) {
+    font-family: "Playfair Display", serif;
+
+    line-height: 1.8;
+
+    color: #4b292e;
+}
+
+.sound-ending-line {
+    width: 100px;
+    height: 1px;
+
+    margin: 35px auto;
+
+    background: #711c2b;
+}
+
+.sound-publication-mark {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 0.12em;
+
+    color: #711c2b;
+}
+
+.sound-tagline {
+    margin-top: 20px;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.2rem;
+
+    font-style: italic;
+
+    color: #3a171d;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.sound-archive-footer {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    gap: 40px;
+
+    padding: 60px 7% 30px;
+
+    background: #3a171d;
+
+    color: #f7efe7;
+
+    border-top: 1px solid rgba(247, 239, 231, 0.15);
+}
+
+.sound-footer-brand h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    margin: 0;
+
+    color: #f7efe7;
+}
+
+.sound-footer-brand p {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.1em;
+
+    color: #d9a8a3;
+}
+
+.sound-footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.sound-footer-links a {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    color: #f7efe7;
+
+    text-decoration: none;
+
+    transition: opacity 0.3s ease;
+}
+
+.sound-footer-links a:hover {
+    opacity: 0.6;
+}
+
+.sound-footer-contact {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.sound-footer-contact span {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    color: #d9a8a3;
+}
+
+.sound-footer-contact a {
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.65rem;
+
+    color: #f7efe7;
+
+    text-decoration: none;
+}
+
+.sound-footer-bottom {
+    grid-column: 1 / -1;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 30px;
+
+    margin-top: 20px;
+
+    border-top: 1px solid rgba(247, 239, 231, 0.15);
+
+    font-family: "DM Mono", monospace;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 0.08em;
+
+    color: #d9a8a3;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .sound-archive-nav {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .sound-archive-nav-links {
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .sound-archive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sound-archive-footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .sound-archive-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sound-archive-header {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+    .sound-archive-footer {
+        grid-template-columns: 1fr;
+    }
+
+    .sound-footer-bottom {
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+}
