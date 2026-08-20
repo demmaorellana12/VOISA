@@ -32,10 +32,18 @@
 
 <nav class="top-nav">
 
-   <div class="nav-logo">
-    <a href="index-es.html">VOISA</a>
-</div>
+    <div class="nav-logo">
+        <a href="index-es.html">VOISA</a>
+    </div>
 
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- DESKTOP NAV -->
     <div class="nav-links">
 
         <a href="index-es.html">
@@ -64,7 +72,37 @@
 
     </div>
 
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index-es.html">
+            Inicio
+        </a>
+
+        <a href="#what-are-the-peoples-pages">
+            Las People's Pages
+        </a>
+
+        <a href="#current-edition">
+            Edición 001
+        </a>
+
+        <a href="#submit">
+            Enviar
+        </a>
+
+        <a href="publication-es.html">
+            Archivo de Las People's Pages
+        </a>
+
+        <a href="peoples-pages.html" class="mobile-language">
+            READ IN ENGLISH →
+        </a>
+
+    </div>
+
 </nav>
+
 
 
 <!-- =========================================================
@@ -850,3 +888,23 @@
 
 </body>
 </html>
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", function () {
+
+    hamburger.classList.toggle("active");
+    mobileMenu.classList.toggle("active");
+
+});
+
+mobileMenu.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        hamburger.classList.remove("active");
+        mobileMenu.classList.remove("active");
+
+    });
+
+});
