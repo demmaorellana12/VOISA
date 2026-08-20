@@ -1327,11 +1327,7 @@ p {
 @media (max-width: 850px) {
 
 
-    .sound-nav nav {
-
-        display: none;
-
-    }
+    
 
 
     .sound-hero {
@@ -1522,11 +1518,22 @@ p {
 
     /* SHOW HAMBURGER */
 
-    .sound-nav .hamburger {
-        display: flex;
-        margin-left: auto;
-    }
-
+   .sound-nav .hamburger {
+    display: flex !important;
+    margin-left: auto;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.sound-nav .hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: var(--cream);
+    transition: 0.25s ease;
+}
     /* MOBILE MENU */
 
     .sound-nav .mobile-menu {
