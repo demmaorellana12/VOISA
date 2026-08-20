@@ -24,6 +24,16 @@
         </a>
     </div>
 
+
+    <!-- HAMBURGUESA -->
+    <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <!-- NAVEGACIÓN DE ESCRITORIO -->
     <nav>
 
         <a href="index-es.html">
@@ -53,10 +63,50 @@
         <a href="#research-notes">
             NOTAS DE INVESTIGACIÓN
         </a>
-<a href="voice.html" class="language-button">
+
+        <a href="voice.html" class="language-button">
             READ IN ENGLISH →
         </a>
+
     </nav>
+
+
+    <!-- MENÚ MÓVIL -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index-es.html">
+            INICIO
+        </a>
+
+        <a href="#take-part">
+            PARTICIPA
+        </a>
+
+        <a href="#youth-report">
+            INFORME DE LA VOZ JUVENIL
+        </a>
+
+        <a href="#report-archive">
+            ARCHIVO DE INFORMES
+        </a>
+
+        <a href="#numbers">
+            LAS CIFRAS
+        </a>
+
+        <a href="#youth-ideas">
+            IDEAS JUVENILES
+        </a>
+
+        <a href="#research-notes">
+            NOTAS DE INVESTIGACIÓN
+        </a>
+
+        <a href="voice.html" class="mobile-language">
+            READ IN ENGLISH →
+        </a>
+
+    </div>
 
 </header>
 
@@ -971,6 +1021,36 @@
     </div>
 
 </footer>
+ <script>
+
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", function () {
+
+    hamburger.classList.toggle("active");
+
+    mobileMenu.classList.toggle("active");
+
+});
+
+
+/* Close menu when a link is clicked */
+
+mobileMenu.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        hamburger.classList.remove("active");
+
+        mobileMenu.classList.remove("active");
+
+    });
+
+});
+
+</script>
+
 
 </body>
 </html>
