@@ -26,13 +26,22 @@
 <nav class="top-nav">
 
     <div class="nav-logo">
-    <a href="index.html">VOISA</a>
-</div>
-   
+        <a href="index.html">VOISA</a>
+    </div>
 
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- DESKTOP NAV -->
     <div class="nav-links">
 
-        <a href="index.html">Home</a>
+        <a href="index.html">
+            Home
+        </a>
 
         <a href="#what-are-the-peoples-pages">
             People's Pages
@@ -45,14 +54,47 @@
         <a href="#submit">
             Submit
         </a>
-        <a href="publication.html">People's Pages Archive </a>
+
+        <a href="publication.html">
+            People's Pages Archive
+        </a>
+
         <a href="people-pages.html" class="language-button">
-            ¿LEER EN ESPAÑOL? →</a>
- 
+            ¿LEER EN ESPAÑOL? →
+        </a>
+
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="#what-are-the-peoples-pages">
+            People's Pages
+        </a>
+
+        <a href="#current-edition">
+            Edition 001
+        </a>
+
+        <a href="#submit">
+            Submit
+        </a>
+
+        <a href="publication.html">
+            People's Pages Archive
+        </a>
+
+        <a href="people-pages.html" class="mobile-language">
+            ¿LEER EN ESPAÑOL? →
+        </a>
+
     </div>
 
 </nav>
-
 
 <!-- =========================================================
      HERO
@@ -802,3 +844,32 @@
 
 </body>
 </html>
+<script>
+
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", function () {
+
+    hamburger.classList.toggle("active");
+
+    mobileMenu.classList.toggle("active");
+
+});
+
+
+/* Close menu when a link is clicked */
+
+mobileMenu.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        hamburger.classList.remove("active");
+
+        mobileMenu.classList.remove("active");
+
+    });
+
+});
+
+</script>
