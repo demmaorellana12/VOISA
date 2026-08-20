@@ -12,7 +12,7 @@
 
 <body>
 
-  <!-- =========================================================
+ <!-- =========================================================
      NAVIGATION
 ========================================================= -->
 
@@ -21,10 +21,19 @@
     <div class="logo">
         <a href="index.html">
             VOISA
-            
         </a>
     </div>
 
+
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <!-- DESKTOP NAV -->
     <nav>
 
         <a href="index.html">
@@ -54,9 +63,53 @@
         <a href="#research-notes">
             RESEARCH NOTES
         </a>
- <a href="voice-es.html" class="language-button">
-            ¿LEER EN ESPAÑOL? →</a>
+
+        <a href="voice-es.html" class="language-button">
+            ¿LEER EN ESPAÑOL? →
+        </a>
+
     </nav>
+
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a href="#take-part">
+            TAKE PART
+        </a>
+
+        <a href="#youth-report">
+            YOUTH VOICE REPORT
+        </a>
+
+        <a href="#report-archive">
+            REPORT ARCHIVE
+        </a>
+
+        <a href="#numbers">
+            THE NUMBERS
+        </a>
+
+        <a href="#youth-ideas">
+            YOUTH IDEAS
+        </a>
+
+        <a href="#research-notes">
+            RESEARCH NOTES
+        </a>
+
+        <a href="voice-es.html" class="mobile-language">
+            ¿LEER EN ESPAÑOL? →
+        </a>
+
+    </div>
+
+</header>
+
 
 </header>
 
@@ -986,6 +1039,35 @@
         </div>
 
     </footer>
+    <script>
+
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", function () {
+
+    hamburger.classList.toggle("active");
+
+    mobileMenu.classList.toggle("active");
+
+});
+
+
+/* Close menu when a link is clicked */
+
+mobileMenu.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        hamburger.classList.remove("active");
+
+        mobileMenu.classList.remove("active");
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
