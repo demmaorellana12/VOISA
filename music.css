@@ -1502,41 +1502,73 @@ p {
    MOBILE NAVIGATION
 ========================================================= */
 
+.hamburger {
+    display: none;
+
+    margin-left: auto;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
+
+    padding: 5px;
+
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+
+    width: 25px;
+    height: 2px;
+
+    background: var(--cream);
+
+    transition: 0.25s ease;
+}
+
+
+/* MOBILE MENU */
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
 @media (max-width: 800px) {
 
-    .sound-nav {
+    .top-nav {
         position: sticky;
-        top: 0;
-        z-index: 100;
+
+        padding: 17px 7vw;
+
+        align-items: center;
     }
+
 
     /* HIDE DESKTOP NAV */
 
-    .sound-nav > nav {
+    .top-nav .nav-links {
         display: none;
     }
 
+
     /* SHOW HAMBURGER */
 
-   .sound-nav .hamburger {
-    display: flex !important;
-    margin-left: auto;
-    flex-direction: column;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-.sound-nav .hamburger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--cream);
-    transition: 0.25s ease;
-}
-    /* MOBILE MENU */
+    .hamburger {
+        display: flex;
+    }
 
-    .sound-nav .mobile-menu {
+
+    /* OPEN MOBILE MENU */
+
+    .mobile-menu {
         position: absolute;
 
         top: 100%;
@@ -1544,6 +1576,7 @@ p {
         right: 0;
 
         display: flex;
+
         flex-direction: column;
 
         padding: 25px 7vw 35px;
@@ -1565,9 +1598,10 @@ p {
             visibility 0.25s ease;
     }
 
+
     /* MENU LINKS */
 
-    .sound-nav .mobile-menu a {
+    .mobile-menu a {
         padding: 16px 0;
 
         border-bottom: 1px solid var(--line);
@@ -1583,15 +1617,19 @@ p {
         opacity: 0.85;
 
         text-decoration: none;
+
+        transition: opacity 0.2s ease;
     }
 
-    .sound-nav .mobile-menu a:hover {
+
+    .mobile-menu a:hover {
         opacity: 1;
     }
 
+
     /* SPANISH BUTTON */
 
-    .sound-nav .mobile-menu .mobile-language {
+    .mobile-menu .mobile-language {
         margin-top: 15px;
 
         padding: 13px 15px;
@@ -1607,9 +1645,10 @@ p {
         opacity: 1;
     }
 
-    /* OPEN MENU */
 
-    .sound-nav .mobile-menu.active {
+    /* WHEN MENU IS OPEN */
+
+    .mobile-menu.active {
         opacity: 1;
 
         visibility: visible;
@@ -1617,17 +1656,18 @@ p {
         transform: translateY(0);
     }
 
+
     /* HAMBURGER → X */
 
-    .sound-nav .hamburger.active span:nth-child(1) {
+    .hamburger.active span:nth-child(1) {
         transform: translateY(7px) rotate(45deg);
     }
 
-    .sound-nav .hamburger.active span:nth-child(2) {
+    .hamburger.active span:nth-child(2) {
         opacity: 0;
     }
 
-    .sound-nav .hamburger.active span:nth-child(3) {
+    .hamburger.active span:nth-child(3) {
         transform: translateY(-7px) rotate(-45deg);
     }
 
