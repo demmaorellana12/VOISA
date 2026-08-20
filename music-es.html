@@ -26,6 +26,16 @@
         VOISA
     </a>
 
+
+    <!-- HAMBURGUESA -->
+    <button class="hamburger" id="hamburger" type="button" aria-label="Abrir menú de navegación">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <!-- NAVEGACIÓN DE ESCRITORIO -->
     <nav>
 
         <a href="index-es.html">
@@ -58,10 +68,45 @@
 
     </nav>
 
+
+    <!-- MENÚ MÓVIL -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index-es.html">
+            INICIO
+        </a>
+
+        <a href="#featured-artist">
+            ARTISTA DESTACADO
+        </a>
+
+        <a href="#monthly-song">
+            CANCIÓN DEL MES
+        </a>
+
+        <a href="#playlists">
+            LISTAS TEMÁTICAS
+        </a>
+
+        <a href="#request">
+            SOLICITUDES
+        </a>
+
+        <a href="sound-archive-es.html">
+            ARCHIVO SONORO
+        </a>
+
+        <a href="music.html" class="mobile-language">
+            READ IN ENGLISH →
+        </a>
+
+    </div>
+
 </header>
 
 
 <main class="sound-page">
+        
 
 
 <!-- =========================================================
@@ -1017,6 +1062,41 @@
 
 
 </main>
+<script>
+
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", function () {
+
+    hamburger.classList.toggle("active");
+
+    mobileMenu.classList.toggle("active");
+
+});
+
+
+/* Close menu when a link is clicked */
+
+mobileMenu.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        hamburger.classList.remove("active");
+
+        mobileMenu.classList.remove("active");
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+</body>
+
+</html>
 
 </body>
 
