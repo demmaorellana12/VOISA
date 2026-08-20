@@ -26,14 +26,26 @@
         VOISA
     </a>
 
-    <!-- =========================================================
+   <!-- =========================================================
      NAVIGATION
 ========================================================= -->
 
 <header class="sound-nav">
 
-    
+    <a href="index.html" class="sound-logo">
+        VOISA
+    </a>
 
+
+    <!-- HAMBURGER -->
+    <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+
+    <!-- DESKTOP NAV -->
     <nav>
 
         <a href="index.html">
@@ -55,22 +67,56 @@
         <a href="#request">
             REQUEST
         </a>
-<a href="sound-archive.html">
+
+        <a href="sound-archive.html">
             SOUND ARCHIVE
         </a>
+
         <a href="music-es.html" class="language-button">
+            LEER EN ESPAÑOL →
+        </a>
 
-    LEER EN ESPAÑOL →
-
-</a>
     </nav>
 
-</header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="index.html">
+            HOME
+        </a>
+
+        <a href="#featured-artist">
+            FEATURED ARTIST
+        </a>
+
+        <a href="#monthly-song">
+            SONG OF THE MONTH
+        </a>
+
+        <a href="#playlists">
+            THEMED PLAYLISTS
+        </a>
+
+        <a href="#request">
+            REQUEST
+        </a>
+
+        <a href="sound-archive.html">
+            SOUND ARCHIVE
+        </a>
+
+        <a href="music-es.html" class="mobile-language">
+            LEER EN ESPAÑOL →
+        </a>
+
+    </div>
 
 </header>
 
 
 <main class="sound-page">
+   
 
 
 <!-- =========================================================
@@ -786,7 +832,35 @@ Imagine became one of Lennon’s most commercially successful and critically acc
     </div>
 
 </footer>
+<script>
 
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", function () {
+
+    hamburger.classList.toggle("active");
+
+    mobileMenu.classList.toggle("active");
+
+});
+
+
+/* Close menu when a link is clicked */
+
+mobileMenu.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        hamburger.classList.remove("active");
+
+        mobileMenu.classList.remove("active");
+
+    });
+
+});
+
+</script>
 
 </main>
 
