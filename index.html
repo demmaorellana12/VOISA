@@ -12,26 +12,57 @@
 <body>
 
     <!-- NAVIGATION -->
-    <header>
-        <div class="logo">
-            VOISA
-            <span>VOZ + VOICE</span>
-        </div>
-<nav>
-    <a href="#about">About</a>
-     <a href="#mission">The Issue</a>
-    <a href="#vision">The Mission</a>
-    <a href="#peoples-pages">People's Pages</a>
-    <a href="#know-your-rights">People’s Briefs</a>
-    <a href="#music">People's Sound</a>
-    <a href="#peoples-voices">People's Voices</a>
-   
+<header>
+    <div class="logo">
+        VOISA
+        <span>VOZ + VOICE</span>
+    </div>
 
-    <a href="index-es.html" class="language-button">
-        ¿LEER EN ESPAÑOL? →
-    </a>
-</nav>
-    </header>
+    <!-- DESKTOP NAV -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#mission">The Issue</a>
+        <a href="#vision">The Mission</a>
+        <a href="#peoples-pages">People's Pages</a>
+        <a href="#know-your-rights">People’s Briefs</a>
+        <a href="#music">People's Sound</a>
+        <a href="#peoples-voices">People's Voices</a>
+
+        <a href="index-es.html" class="language-button">
+            ¿LEER EN ESPAÑOL? →
+        </a>
+    </nav>
+
+    <!-- MOBILE HAMBURGER -->
+    <button class="hamburger" id="hamburger" aria-label="Open navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+
+        <a href="#about">About</a>
+
+        <a href="#mission">The Issue</a>
+
+        <a href="#vision">The Mission</a>
+
+        <a href="#peoples-pages">People's Pages</a>
+
+        <a href="#know-your-rights">People’s Briefs</a>
+
+        <a href="#music">People's Sound</a>
+
+        <a href="#peoples-voices">People's Voices</a>
+
+        <a href="index-es.html" class="mobile-language">
+            ¿LEER EN ESPAÑOL? →
+        </a>
+
+    </div>
+</header>
 
 
     <!-- HERO SECTION -->
@@ -772,3 +803,32 @@
     <p>VOISA · 2026</p>
 </div>
  </footer>
+<script>
+
+const hamburger = document.getElementById("hamburger");
+const mobileMenu = document.getElementById("mobileMenu");
+
+hamburger.addEventListener("click", function () {
+
+    hamburger.classList.toggle("active");
+
+    mobileMenu.classList.toggle("active");
+
+});
+
+
+/* Close menu when a link is clicked */
+
+mobileMenu.querySelectorAll("a").forEach(link => {
+
+    link.addEventListener("click", function () {
+
+        hamburger.classList.remove("active");
+
+        mobileMenu.classList.remove("active");
+
+    });
+
+});
+
+</script>

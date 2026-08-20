@@ -1437,11 +1437,7 @@ footer p {
     }
 
 
-    nav a:not(.nav-button) {
-
-        display: none;
-
-    }
+ 
 
 
     .hero {
@@ -3224,6 +3220,183 @@ section#music.peoples-sound .sound-preview-footer {
 
     section#music.peoples-sound .sound-home-preview h3 {
         font-size: 3rem;
+    }
+
+}
+/* =========================================================
+   MOBILE HAMBURGER MENU
+========================================================= */
+
+/* HAMBURGER — HIDDEN ON DESKTOP */
+
+.hamburger {
+    display: none;
+
+    background: none;
+    border: none;
+
+    padding: 8px;
+
+    cursor: pointer;
+
+    flex-direction: column;
+    gap: 5px;
+
+    z-index: 300;
+}
+
+.hamburger span {
+    display: block;
+
+    width: 27px;
+    height: 2px;
+
+    background: var(--pale-yellow);
+
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+
+/* MOBILE MENU */
+
+.mobile-menu {
+    display: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 800px) {
+
+    header {
+        position: sticky;
+
+        padding: 17px 7vw;
+
+        align-items: center;
+    }
+
+
+    /* HIDE DESKTOP NAV */
+
+    header nav {
+        display: none;
+    }
+
+
+    /* SHOW HAMBURGER */
+
+    .hamburger {
+        display: flex;
+        margin-left: auto;
+    }
+
+
+    /* OPEN MOBILE MENU */
+
+    .mobile-menu {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+        right: 0;
+
+        display: flex;
+
+        flex-direction: column;
+
+        padding: 25px 7vw 35px;
+
+        background: rgba(33, 5, 13, 0.98);
+
+        border-bottom: 1px solid var(--line);
+
+        backdrop-filter: blur(12px);
+
+        opacity: 0;
+        visibility: hidden;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity 0.25s ease,
+            transform 0.25s ease,
+            visibility 0.25s ease;
+    }
+
+
+    /* MENU LINKS */
+
+    .mobile-menu a {
+        padding: 16px 0;
+
+        border-bottom: 1px solid var(--line);
+
+        font-family: "Special Elite", monospace;
+
+        font-size: 0.7rem;
+
+        letter-spacing: 0.08em;
+
+        color: var(--pale-yellow);
+
+        opacity: 0.85;
+
+        transition: opacity 0.2s ease;
+    }
+
+
+    .mobile-menu a:hover {
+        opacity: 1;
+    }
+
+
+    /* SPANISH BUTTON */
+
+    .mobile-menu .mobile-language {
+        margin-top: 15px;
+
+        padding: 13px 15px;
+
+        background: var(--wine-red);
+
+        border: 1px solid rgba(255, 246, 220, 0.2);
+
+        text-align: center;
+
+        color: var(--pale-yellow);
+
+        opacity: 1;
+    }
+
+
+    /* WHEN MENU IS OPEN */
+
+    .mobile-menu.active {
+        opacity: 1;
+
+        visibility: visible;
+
+        transform: translateY(0);
+    }
+
+
+    /* HAMBURGER → X */
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
     }
 
 }
